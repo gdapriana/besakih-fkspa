@@ -8,6 +8,7 @@
       ['title' => 'Struktur Organisasi', 'link' => './pages/struktur_organisasi.php', 'active' => false],
       ['title' => 'Job Description', 'link' => './pages/job_description.php', 'active' => false],
       ['title' => 'Perjanjian Kerja Sama', 'link' => './pages/perjanjian_kerjasama.php', 'active' => false],
+      ['title' => 'Form SOP', 'link' => './pages/form_sop.php', 'active' => false],
     ],
   ]))
 ?>

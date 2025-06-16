@@ -1,6 +1,6 @@
 <?php
   $hero_data = json_decode(json_encode([
-    'logo' => '../../assets/besakih.png',
+    'logo' => 'https://jwc.gotra-resources.my.id/web-upload/1750044878-16-06-2025-fQTrc6t97Vm5PvuC0GFswnXzdDZILHRK.webp',
     'background' => 'https://images.unsplash.com/photo-1655289112205-d3b56c6b61f8?q=80&w=2105&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     'navigations' => [
       ['title' => 'Kebijakan', 'link' => './kebijakan.php', 'active' => false],
@@ -8,6 +8,7 @@
       ['title' => 'Struktur Organisasi', 'link' => './struktur_organisasi.php', 'active' => false],
       ['title' => 'Job Description', 'link' => './job_description.php', 'active' => false],
       ['title' => 'Perjanjian Kerja Sama', 'link' => './perjanjian_kerjasama.php', 'active' => false],
+      ['title' => 'Form SOP', 'link' => './form_sop.php', 'active' => false],
     ],
   ]))
 ?>

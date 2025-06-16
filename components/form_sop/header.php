@@ -6,14 +6,14 @@
       ['title' => 'Kebijakan', 'link' => './kebijakan.php', 'active' => false],
       ['title' => 'Standar Operasional dan Prosedur', 'link' => './standar_operasional_dan_prosedur.php', 'active' => false],
       ['title' => 'Struktur Organisasi', 'link' => './struktur_organisasi.php', 'active' => false],
-      ['title' => 'Job Description', 'link' => './job_description.php', 'active' => true],
+      ['title' => 'Job Description', 'link' => './job_description.php', 'active' => false],
       ['title' => 'Perjanjian Kerja Sama', 'link' => './perjanjian_kerjasama.php', 'active' => false],
-      ['title' => 'Form SOP', 'link' => './form_sop.php', 'active' => false],
+      ['title' => 'Form SOP', 'link' => './form_sop.php', 'active' => true],
     ],
   ]))
 ?>
 
-<main id="job-header-root" style="background-image: url(<?= $hero_data->background; ?>)">
+<main id="form-header-root" style="background-image: url(<?= $hero_data->background; ?>)">
   <header class="hero-header">
     <a href="/" class="logo">
       <img src="<?= $hero_data->logo ?>" alt="brand">
@@ -53,7 +53,7 @@
   <div class="hero-overlay"></div>
 </main>
 
-<div id="job-hamburger-content">
+<div id="form-hamburger-content">
   <header class="hamburger-header">
     <a href="#" class="logo">
       <img src="<?= $hero_data->logo ?>" alt="brand">
@@ -78,9 +78,9 @@
 
 <script defer>
   document.addEventListener('DOMContentLoaded', () => {
-    const heroHamburgerBtn = document.querySelector('#job-header-root .hamburger-btn')
-    const heroHamburgerBtnClose = document.querySelector('#job-hamburger-content .hamburger-btn-close')
-    const heroHamburgerContent = document.querySelector('#job-hamburger-content')
+    const heroHamburgerBtn = document.querySelector('#form-header-root .hamburger-btn')
+    const heroHamburgerBtnClose = document.querySelector('#form-hamburger-content .hamburger-btn-close')
+    const heroHamburgerContent = document.querySelector('#form-hamburger-content')
 
     heroHamburgerBtn.addEventListener('click', () => {
       heroHamburgerContent.style.right = "0"

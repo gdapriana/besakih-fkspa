@@ -31,6 +31,7 @@
 #homepage-section-4 .wrapper .cta-wrapper .cta {
   padding: 0.6rem 1.2rem;
   border-radius: 16px;
+  transition: all ease-in-out 0.3s;
   border: 1px solid white;
   background-color: rgba(0, 0, 0, 0.7);
   font-size: 16px;
@@ -38,6 +39,9 @@
   font-family: var(--primtext), sans-serif;
   line-height: 1.8;
   color: rgb(255, 255, 255);
+}
+#homepage-section-4 .wrapper .cta-wrapper .cta:hover {
+  opacity: 0.8;
 }
 @media (min-width: 768px) {
   #homepage-section-4 .wrapper .cta-wrapper .cta {
