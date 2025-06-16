@@ -1,0 +1,10 @@
+@use "../lib" as v
+
+#footer-root
+  background-color: var(--color2)
+  @include v.sectionInit($tb: 1rem)
+
+  .wrapper
+    @include v.flx()
+    color: white
+    text-align: center

@@ -1,0 +1,14 @@
+@use "../../lib" as v
+
+#struktur-section-3
+  @include v.sectionInit($dis: flex)
+
+  .wrapper
+    @include v.flx($d: column, $j: start, $i: stretch, $g: 2rem)
+
+    .content
+      @include v.flx($d: column, $j: start, $i: stretch, $g: 2rem)
+
+      img
+        width: 100%
+

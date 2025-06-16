@@ -1,0 +1,36 @@
+@use "../../lib" as v
+
+#homepage-section-4
+  position: relative
+  @include v.sectionInit()
+
+  .wrapper
+    z-index: 3
+    @include v.flx($d: column, $i: end, $g: 1.4rem)
+
+    .cta-wrapper
+      @include v.flx($d: column, $j: start, $i: end, $g: 1rem)
+
+      .cta
+        @include v.button($br: 16px)
+        border: 1px solid white
+        background-color: rgba(0, 0, 0, 0.7)
+        @include v.subtext($cl: white, $op: 1)
+
+  .section-overlay
+    z-index: 2
+    position: absolute
+    width: 100%
+    height: 100%
+    background: #ffe7ad
+    background: linear-gradient(-90deg, rgba(255, 231, 173, 1) 0%, rgba(255, 255, 255, 0) 100%)
+
+  .section-img
+    z-index: 1
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    object-fit: cover
+

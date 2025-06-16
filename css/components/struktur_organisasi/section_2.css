@@ -1,0 +1,34 @@
+#struktur-section-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  background-color: var(--color4);
+}
+#struktur-section-2 .wrapper {
+  width: 100%;
+  padding: 0 7%;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+#struktur-section-2 .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  gap: 2rem;
+}
+#struktur-section-2 .wrapper .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  gap: 2rem;
+}
+#struktur-section-2 .wrapper .content img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=section_2.css.map */

@@ -1,0 +1,174 @@
+@use "../lib" as v
+
+#hero-root
+  position: relative
+  width: 100%
+  padding: 1rem
+  background-size: cover
+  background-position: center
+  @include v.flx($d: column)
+  height: 600px
+  @include v.pad($tb: 3rem)
+
+  .hero-header
+    z-index: 3
+    width: 100%
+    @include v.flx($j: space-between, $g: 1rem)
+
+    .logo
+      @include v.flx($i: center, $g: 1rem)
+
+      img
+        height: 60px
+        aspect-ratio: 1/1
+        @media (min-width: v.$mminimumres)
+          height: 80px
+
+      .logo-text
+        display: none
+        text-transform: uppercase
+        @include v.heading($fs: 16px, $fw: bold, $cl: white)
+        @media (min-width: v.$mminimumres)
+          display: inline
+
+
+    .hamburger-btn
+      border: none
+      font-size: 1rem
+      color: white
+      background-color: var(--colors)
+      cursor: pointer
+      @include v.button()
+      @media (min-width: v.$mminimumres)
+        display: none
+
+    .hero-email
+      cursor: pointer
+      display: none
+      @include v.button()
+      color: white
+      background-color: rgba(0, 0, 0, 0.8)
+      border: none
+      @include v.subtext($fs: 14px, $cl: white, $op: 1)
+      @media (min-width: v.$mminimumres)
+        display: block
+
+  .hero-content
+    z-index: 2
+    flex: 1
+    @include v.flx($i: stretch)
+    width: 100%
+    color: white
+
+    .hero-left
+      @include v.flx($i: end, $j: start)
+      width: 100%
+
+      .hero-form
+        width: 100%
+        max-width: 300px
+        @include v.flx($d: column, $j: start, $i: stretch, $g: .8rem)
+
+        .input-label
+          width: 100%
+
+          input
+            font-family: var(--primtext), sans-serif
+            font-size: 1rem
+            @include v.button()
+            border: 1px solid white
+            background-color: rgba(0, 0, 0, 0.8)
+            color: white
+            width: 100%
+
+    .hero-right
+      display: none
+
+      .navigation-list
+        @include v.flx($d: column, $j: start, $i: stretch)
+
+        .navigation-item
+          @include v.subtext($cl: white, $op: 1)
+          padding: .6rem 0
+          border-bottom: 1px solid white
+          @include v.trans()
+
+          &:hover
+            color: var(--colors)
+            border-bottom: 1px solid var(--colors)
+
+
+    @media (min-width: v.$mminimumres)
+      .hero-left
+        width: 50%
+
+      .hero-right
+        @include v.flx($j: end)
+        width: 50%
+
+  .hero-overlay
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 1
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, 0.4)
+
+#hamburger-content
+  z-index: 9999
+  position: fixed
+  padding: 1rem
+  top: 0
+  width: 100%
+  @include v.trans()
+  height: 100dvh
+  background-color: white
+  opacity: 0
+  right: -100%
+  @include v.flx($d: column, $j: start, $i: start, $g: 2rem)
+
+  .hamburger-header
+    width: 100%
+    @include v.flx($j: space-between, $g: 1rem)
+    @media(min-width: v.$mminimumres)
+      display: none
+
+    .logo
+      width: 60px
+
+      img
+        width: 100%
+
+    .hamburger-btn-close
+      border: none
+      font-size: 1rem
+      color: white
+      background-color: var(--colors)
+      cursor: pointer
+      @include v.button()
+
+
+  .hamburger-list
+    width: 100%
+    @include v.flx($d: column, $j: start, $i: stretch, $g: .8rem)
+
+    .hamburger-link
+      @include v.subtext($op: 0.8, $fw: 500, $fs: 18px)
+      @include v.trans()
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2)
+      padding: .4rem 0
+
+      &:hover
+        color: var(--colors)
+        border-bottom: 1px solid var(--colors)
+
+  .hamburger-email
+    cursor: pointer
+    @include v.button()
+    color: white
+    background-color: rgba(0, 0, 0, 0.8)
+    border: none
+    margin-top: auto
+    margin-left: auto
+    @include v.subtext($cl: white, $op: 1)

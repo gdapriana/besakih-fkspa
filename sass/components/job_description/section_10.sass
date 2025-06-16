@@ -1,0 +1,14 @@
+@use "../../lib" as v
+
+#job-section-10
+  @include v.sectionInit($dis: flex, $tb: 0px)
+
+  .wrapper
+    @include v.flx($d: column, $j: start, $i: stretch, $g: 2rem)
+
+    .content
+      border-top: 1px solid var(--color2)
+      padding-top: clamp(2rem, 3vw, 4rem)
+      padding-bottom: clamp(2rem, 3vw, 4rem)
+
+

@@ -1,0 +1,68 @@
+:root {
+  --primtext: "DM Sans", sans-serif;
+  --colors: #E09C34;
+  --color2: #815F20;
+  --color3: #FEE6AE;
+  --color4: #FDEFC9;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+body {
+  font-family: var(--primtext), sans-serif;
+  scroll-behavior: smooth;
+}
+
+.typography h4 {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: var(--primtext), sans-serif;
+  line-height: 1.8;
+  color: rgba(0, 0, 0, 0.8);
+}
+@media (min-width: 768px) {
+  .typography h4 {
+    font-size: 24px;
+  }
+}
+.typography h5 {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--primtext), sans-serif;
+  line-height: 1.8;
+  color: rgba(0, 0, 0, 0.8);
+}
+@media (min-width: 768px) {
+  .typography h5 {
+    font-size: 19.2px;
+  }
+}
+.typography p, .typography li {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: var(--primtext), sans-serif;
+  line-height: 1.8;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: justify;
+}
+@media (min-width: 768px) {
+  .typography p, .typography li {
+    font-size: 16.8px;
+  }
+}
+.typography ul, .typography ol {
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  margin: 0.4rem 0;
+}
+
+/*# sourceMappingURL=format.css.map */

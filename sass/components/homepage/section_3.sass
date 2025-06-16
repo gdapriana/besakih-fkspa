@@ -1,0 +1,33 @@
+@use "../../lib" as v
+
+#homepage-section-3
+  @include v.sectionInit()
+
+  .wrapper
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: repeat(2, auto)
+    gap: 3rem
+    grid-template-areas: "content-1 content-2" "content-3 content-3"
+
+    @media (min-width: v.$mminimumres)
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-rows: repeat(2, auto)
+      grid-template-areas: "content-1 content-3" "content-2 content-3"
+
+    .content-1
+      grid-area: content-1
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+    .content-2
+      grid-area: content-2
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+    .content-3
+      grid-area: content-3

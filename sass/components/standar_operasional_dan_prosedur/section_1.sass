@@ -1,0 +1,76 @@
+@use "../../lib" as v
+
+#sop-section-1
+  @include v.sectionInit($dis: flex)
+
+  .wrapper
+    @include v.flx($d: column, $j: start, $i: stretch, $g: 2rem)
+
+    .header
+      grid-area: header
+      @include v.headerTemplate()
+
+    .content
+      @include v.flx($d: column, $j: start, $i: stretch, $g: 2rem)
+
+      .card-wrapper
+        @include v.flx($d: column, $j: start, $i: stretch, $g: .6rem)
+
+        .card-wrapper-title
+          @include v.heading($fw: bold, $fs: 20px, $op: .8)
+
+        .card-wrapper-content
+          @include v.grd($c: 1, $g: 1rem)
+          @media (min-width: v.$minimumres)
+            @include v.grd($c: 2, $g: 1rem)
+
+
+          .card
+            @include v.flx($d: column, $j: start, $i: stretch, $g: 2rem)
+            border-radius: 1.2rem
+            padding: clamp(1rem, 2vw, 2rem)
+            border: 2px solid rgba(0, 0, 0, 0.5)
+
+            @media (min-width: v.$mminimumres)
+              @include v.flx($i: stretch, $g: 2rem)
+
+
+            .card-cover
+              @media (min-width: v.$mminimumres)
+                width: 30%
+              img
+                object-fit: cover
+                width: 100%
+                height: 200px
+                border-radius: .6rem
+                @media (min-width: v.$mminimumres)
+                  height: 100%
+
+            .card-content
+              @include v.flx($d: column, $j: start, $i: stretch, $g: 1rem)
+              @media (min-width: v.$mminimumres)
+                width: 70%
+
+              .card-header
+                @include v.flx($j: space-between)
+
+                .card-title
+                  @include v.heading($fs: 20px, $fw: bold, $cl: var(--colors))
+
+                .card-date
+                  @include v.subtext($lh: 1.4, $op: 0.8, $fw: 600)
+
+              .card-desc
+                @include v.subtext($lh: 1.4)
+                @include v.lineClamp()
+
+              .card-footer
+                margin-top: 1rem
+                @include v.flx($j: end)
+
+                .card-cta
+                  @include v.subtext($op: 0.8)
+
+
+
+
